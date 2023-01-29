@@ -13,6 +13,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install
+      - run: npm run ios
       - run: npx react-native run-ios --configuration=release
       - run:
           # compress Xcode's build output so that it can be stored as an artifact
